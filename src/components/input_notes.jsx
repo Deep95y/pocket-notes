@@ -10,8 +10,6 @@ const InputNotes = ({groupdata, selectedgroup, setGroupData}) => {
 
   const checkInputNote = (e) => {
     const inputValue = e.target.value;
-    console.log("fukc");
-
     console.log(inputValue);
     if (inputValue.trim() !== ''){
       setInputNote(inputValue);
