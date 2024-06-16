@@ -59,7 +59,7 @@ const Sidebar = ({ groupdata, selectedgroup, setselectedgroup }) => {
       <div className='group-lists'>
         {groupdata && groupdata.length > 0 && (
           groupdata.map((item, index) => (
-            <div className="individual-list">
+            <div className="individual-list" key={"individual-list-" + index} onClick={() => updateSelectedGroup(index)}>
             <div style={{
                         display: 'flex',
                         width: '3rem',
@@ -71,7 +71,7 @@ const Sidebar = ({ groupdata, selectedgroup, setselectedgroup }) => {
                         alignItems: 'center'
                       }}><InitialChars sentence={item.groupname} /></div>
 
-            <div className="group-list" key={"group-list-" + index} onClick={() => updateSelectedGroup(index)}>
+            <div className="group-list" key={"group-list-" + index} >
               {item.groupname.charAt(0).toUpperCase() + item.groupname.slice(1)}
             </div>
             </div>
