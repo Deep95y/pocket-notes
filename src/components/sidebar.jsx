@@ -87,7 +87,6 @@ const Sidebar = ({ groupdata, selectedgroup, setselectedgroup }) => {
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            height: '25%',
             width: '30%',
             padding: '20px',
             overflow: "none",
