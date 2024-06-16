@@ -18,7 +18,7 @@ const Sidebar = ({ groupdata, selectedgroup, setselectedgroup }) => {
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [groupname, setGroupName] = useState(null);
-  const [selectedcolor, setSelectedColor] = useState(null);
+  const [selectedcolor, setSelectedColor] = useState("#808080");
   
   const colors = ["#B38BFA", "#FF79F2", "#43E6FC", "#F19576", "#0047FF", "#6691FF"];
 
