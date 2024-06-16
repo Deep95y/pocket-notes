@@ -12,9 +12,15 @@ function App() {
   const [groupdata, setGroupData] = useState([]);
   const [selectedgroup, setselectedgroup] = useState(null);
 
-  // localStorage.setItem(groupdata, 'groupdata');
-  // setselectedgroup(JSON.parse(localStorage.getItem('groupdata')));
-  
+  useEffect(() => {
+    const storedData = localStorage.getItem('groupdata');
+    if (storedData) {
+      setGroupData(JSON.parse(storedData));
+    } else {
+      setGroupData([]);
+    }
+  }, []);
+
   return (
     <>
     <div id="sidebar">
