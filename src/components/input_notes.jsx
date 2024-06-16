@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../assets/styles/input_notes.css'
 import disable_button from '../assets/img/enter_button_disable.png';
 import enable_button from '../assets/img/enter_button_enable.png';
@@ -8,6 +8,10 @@ const InputNotes = ({groupdata, selectedgroup, setGroupData}) => {
   const [inputnote, setInputNote] = useState("");
   const [clickButton, setClickButton] = useState(disable_button);
 
+  useEffect(() => {
+    localStorage.setItem('groupdata', JSON.stringify(groupdata));
+  }, [groupdata]);
+  
   const checkInputNote = (e) => {
     const inputValue = e.target.value;
     console.log(inputValue);
